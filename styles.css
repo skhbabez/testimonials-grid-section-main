@@ -92,7 +92,12 @@ blockquote::after {
 
 .testimonial-list {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template:
+    "t1"
+    "t2"
+    "t3"
+    "t4"
+    "t5";
   gap: var(--space-l);
 }
 
@@ -109,7 +114,11 @@ blockquote::after {
   box-shadow: 40px 60px 50px -47px #48556a; /* lift this up*/
 }
 
-.testimonial-list li:nth-of-type(2) {
+.testimonial-1 {
+  grid-area: t1;
+}
+.testimonial-2 {
+  grid-area: t2;
   --name-color: var(--white);
   --verified-color: var(--grey-300);
   --push-quote-color: var(--white);
@@ -117,21 +126,33 @@ blockquote::after {
   --testimonial-background: var(--grey-500);
   --avatar-outline: unset;
 }
-.testimonial-list :is(li:nth-of-type(3), li:nth-of-type(5)) {
-  --name-color: var(--grey-500);
-  --verified-color: var(--grey-400);
-  --push-quote-color: var(--grey-500);
-  --blockquote-color: var(--grey-400);
-  --testimonial-background: var(--white);
-  --avatar-outline: unset;
+
+.testimonial-3 {
+  grid-area: t3;
 }
-.testimonial-list li:nth-of-type(4) {
+
+.testimonial-4 {
   --name-color: var(--white);
   --verified-color: var(--white);
   --push-quote-color: var(--grey-200);
   --blockquote-color: var(--grey-100);
   --testimonial-background: var(--dark-blue);
   --avatar-outline: 0.125rem solid var(--purple-500);
+  grid-area: t4;
+}
+
+.testimonial-5 {
+  grid-area: t5;
+}
+
+.testimonial-3,
+.testimonial-5 {
+  --name-color: var(--grey-500);
+  --verified-color: var(--grey-400);
+  --push-quote-color: var(--grey-500);
+  --blockquote-color: var(--grey-400);
+  --testimonial-background: var(--white);
+  --avatar-outline: unset;
 }
 
 .testimonial > * + * {
@@ -171,4 +192,22 @@ blockquote::after {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 48em) {
+  .testimonial-list {
+    grid-template:
+      "t1 t1"
+      "t2 t3"
+      "t4 t4"
+      "t5 t5";
+  }
+}
+
+@media (min-width: 77.5em) {
+  .testimonial-list {
+    grid-template:
+      "t1 t1 t2 t5"
+      "t3 t4 t4 t5";
+  }
 }
