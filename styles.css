@@ -55,16 +55,17 @@ img {
 body {
   font-family: var(--font-base);
   letter-spacing: 0;
+  min-block-size: 100dvh;
   font-size: var(--step-2);
   background-color: var(--cream);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  justify-items: center;
+  line-height: 1.2;
 }
 
-p {
-  max-inline-size: 60ch;
-}
-
-h1 {
-  max-inline-size: 50ch;
+main {
+  margin: auto;
 }
 
 ul,
@@ -75,6 +76,7 @@ ol {
 blockquote {
   font-size: var(--step-1);
   color: var(--blockquote-color);
+  line-height: 1.4;
 }
 
 blockquote::before {
@@ -92,7 +94,8 @@ blockquote::after {
 
 .testimonial-list {
   display: grid;
-  grid-template:
+  grid-template-columns: minmax(auto, 19.0625rem);
+  grid-template-areas:
     "t1"
     "t2"
     "t3"
@@ -132,13 +135,13 @@ blockquote::after {
 }
 
 .testimonial-4 {
+  grid-area: t4;
   --name-color: var(--white);
   --verified-color: var(--white);
   --push-quote-color: var(--grey-200);
   --blockquote-color: var(--grey-100);
   --testimonial-background: var(--dark-blue);
   --avatar-outline: 0.125rem solid var(--purple-500);
-  grid-area: t4;
 }
 
 .testimonial-5 {
@@ -196,7 +199,8 @@ blockquote::after {
 
 @media (min-width: 48em) {
   .testimonial-list {
-    grid-template:
+    grid-template-columns: repeat(2, minmax(auto, 19.21875rem));
+    grid-template-areas:
       "t1 t1"
       "t2 t3"
       "t4 t4"
@@ -206,7 +210,8 @@ blockquote::after {
 
 @media (min-width: 77.5em) {
   .testimonial-list {
-    grid-template:
+    grid-template-columns: repeat(4, minmax(auto, 15.9375rem));
+    grid-template-areas:
       "t1 t1 t2 t5"
       "t3 t4 t4 t5";
   }
