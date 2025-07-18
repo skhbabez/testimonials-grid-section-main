@@ -37,7 +37,9 @@
   --step-0: clamp(0.625rem, 0.6071rem + 0.0893vw, 0.6875rem); /*10px - 11px */
   --step-1: clamp(0.6875rem, 0.6518rem + 0.1786vw, 0.8125rem); /*11px - 13px */
   --step-2: clamp(1.125rem, 1.0893rem + 0.1786vw, 1.25rem); /* 18px - 20px*/
+  --step-3: clamp(2.5rem, 2.071rem + 2.143vw, 4rem);
   --corner-radius: 0.5rem;
+  --flow: var(--space-l);
 }
 *,
 ::before,
@@ -58,19 +60,23 @@ body {
   min-block-size: 100dvh;
   font-size: var(--step-2);
   background-color: var(--cream);
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   line-height: 1.2;
-}
-
-main {
-  margin: auto;
+  padding: 1.09375rem;
 }
 
 ul,
 ol {
   list-style: none;
+}
+
+h1 {
+  line-height: 1.1;
+  font-size: var(--step-3);
+  color: var(--grey-500);
 }
 
 blockquote {
@@ -101,7 +107,7 @@ blockquote::after {
     "t3"
     "t4"
     "t5";
-  gap: var(--space-l);
+  row-gap: var(--space-l);
 }
 
 .testimonial {
@@ -111,6 +117,7 @@ blockquote::after {
   --push-quote-color: var(--purple-50);
   --testimonial-background: var(--purple-500);
   --avatar-outline: 0.125rem solid var(--purple-400);
+  --flow: var(--space-m);
   background-color: var(--testimonial-background);
   padding: var(--space-l);
   border-radius: var(--corner-radius);
@@ -158,8 +165,8 @@ blockquote::after {
   --avatar-outline: unset;
 }
 
-.testimonial > * + * {
-  margin-block-start: var(--space-m);
+.flow > * + * {
+  margin-block-start: var(--flow, 1em);
 }
 
 .testimonial header {
@@ -190,7 +197,7 @@ blockquote::after {
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: var(--step-0);
   text-align: center;
 }
 .attribution a {
@@ -205,6 +212,7 @@ blockquote::after {
       "t2 t3"
       "t4 t4"
       "t5 t5";
+    column-gap: var(--space-l);
   }
 }
 
@@ -214,5 +222,6 @@ blockquote::after {
     grid-template-areas:
       "t1 t1 t2 t5"
       "t3 t4 t4 t5";
+    row-gap: var(--space-m);
   }
 }
