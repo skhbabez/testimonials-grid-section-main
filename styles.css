@@ -121,7 +121,7 @@ blockquote::after {
   background-color: var(--testimonial-background);
   padding: var(--space-l);
   border-radius: var(--corner-radius);
-  box-shadow: 40px 60px 50px -47px #48556a; /* lift this up*/
+  box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 25%);
 }
 
 .testimonial-1 {
