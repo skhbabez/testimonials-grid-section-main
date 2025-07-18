@@ -117,7 +117,7 @@ blockquote::after {
   --push-quote-color: var(--purple-50);
   --testimonial-background: var(--purple-500);
   --avatar-outline: 0.125rem solid var(--purple-400);
-  --flow: var(--space-m);
+  --flow: var(--space-s);
   background-color: var(--testimonial-background);
   padding: var(--space-l);
   border-radius: var(--corner-radius);
