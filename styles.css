@@ -125,6 +125,9 @@ blockquote::after {
 }
 
 .testimonial-1 {
+  background-image: url("images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: 23.5rem 0;
   grid-area: t1;
 }
 .testimonial-2 {
