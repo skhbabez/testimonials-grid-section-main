@@ -40,7 +40,7 @@
   --step-3: clamp(2.5rem, 2.071rem + 2.143vw, 4rem);
   --corner-radius: 0.5rem;
   --flow: var(--space-l);
-  --shadow: 40px 60px 50px -2px rgba(72, 85, 106, 25%);
+  --shadow: 40px 60px 50px -2px rgba(72, 85, 106, 40%);
 }
 *,
 ::before,
