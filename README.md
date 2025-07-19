@@ -52,7 +52,7 @@ I learned how to utilize type and spacing scales better, using websites like uto
 
 ### Continued development
 
-I am not happy yet with the way I designed my type and spacing scales and need to develop a better sense for them especially from a responsive standpoint. I also want to dive deeper into grids, especially into designing responsive grids without fixed column numbers.
+I am not happy yet with the way I designed my type and spacing scales and need to develop a better sense for them especially from a responsive standpoint. I also want to dive deeper into grids, especially into designing responsive grids without fixed column numbers. I am not particularly happy on how I strcutired my custom properties and i will have to put a little bit more thought in to thses on my next project, especially considering default values.
 
 ### Useful resources
 
