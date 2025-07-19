@@ -3,14 +3,14 @@
   font-weight: 500;
   font-style: normal;
   src: local("Barlow Semi Condensed"),
-    url("./fonts/BarlowSemiCondensed-medium.ttf") format("TrueType");
+    url("fonts/BarlowSemiCondensed-medium.ttf") format("TrueType");
 }
 @font-face {
   font-family: "Barlow Semi Condensed";
   font-weight: 600;
   font-style: normal;
   src: local("Barlow Semi Condensed"),
-    url("./fonts/BarlowSemiCondensed-SemiBold.ttf") format("TrueType");
+    url("fonts/BarlowSemiCondensed-SemiBold.ttf") format("TrueType");
 }
 
 :root {
